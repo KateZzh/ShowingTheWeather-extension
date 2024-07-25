@@ -1,0 +1,10 @@
+{
+    "name": {
+        "message": "Showing the weather",
+        "description": "extension name"
+    },
+    "description": {
+        "message": "Shows weather information on the website",
+        "description": "extension description"
+    }
+}

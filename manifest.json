@@ -1,0 +1,43 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_name__",
+  "description": "__MSG_description__",
+  "version": "1.0",
+  "default_locale": "en",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "32": "icons/icon-32.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "32": "icons/icon-32.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "host_permissions": [
+  "https://www.npr.org/*",
+  "https://api.openweathermap.org/*"
+],
+  "content_scripts": [
+    {
+      "matches": ["https://www.npr.org/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["icons/icon-32.png", "css/styles.css"],
+    "matches": ["https://www.npr.org/*"]
+  }],
+  "background": {
+    "service_worker": "js/background.js"
+  }
+}
+
